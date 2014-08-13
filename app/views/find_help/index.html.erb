@@ -1,0 +1,12 @@
+This needs a drop down menu.
+
+<div id="org-select">
+  <%= collection_select :installation, :id, Installation.all, :id, :name %>
+
+<%= button_to "Acknowledged", { :controller => 'installations', :action => 'show',
+  :id => :installation.id}, 
+  :method => :get %>
+
+</div>
+
+

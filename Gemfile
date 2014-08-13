@@ -13,6 +13,9 @@ gem 'spring',        group: :development
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'simple_form'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'bootstrap_form', '2.1.1'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]

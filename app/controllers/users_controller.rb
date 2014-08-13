@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!
-
+  skip_before_filter :require_login
   def index
     @users = User.all
   end

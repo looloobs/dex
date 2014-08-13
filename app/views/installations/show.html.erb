@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-md-8">	
+	<p id="notice"><%= notice %></p>
+	  <% @contacts.each do |contact| %>
+		<div class = "contact-general">
+			<h3><%= contact.name %></h3>
+			<h4><%= contact.category.name %> </h4>
+			<div class="right"> <%= link_to "READ MORE", contact_path(contact)%></div>
+		</div>
+	  <% end %></div>
+	
+  <div class="col-md-4"><%= image_tag("rolodex.jpg") %></div>
+</div>

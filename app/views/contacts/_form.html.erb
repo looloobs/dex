@@ -1,0 +1,31 @@
+
+  	<%= bootstrap_form_for(@contact) do |f| %>
+	<%= f.alert_message "Please fix the errors below." %>
+	<form role="form">
+	  <div class="form-group">
+	    <%= f.text_field :name %>
+	    <%= f.text_field :phone %>
+	    <%= f.text_field :email %>
+	    <%= f.collection_select :category_id, Category.order(:name), :id, :name, include_blank: true %><br />
+		 <%= f.collection_select :installation_id, Installation.order(:name), :id, :name, include_blank:true %><br />
+		<%= f.text_area :note %>
+
+
+		<%= f.fields_for :reviews do |builder| %>
+	  <p>
+	    <%= builder.label :comments, "Review" %><br />
+	    <%= builder.text_area :comments, :rows => 3 %>
+		<%= builder.select :stars, options_for_select(%w[1 2 3 4 5]) %>
+		<%= builder.hidden_field :user_id, :value => current_user.id %>
+	  </p>
+	  <% end %>
+	  </div>
+
+	  <div class="form-actions">
+	    <%= f.button :submit %>
+	  </div>
+	</form>
+	<% end %>
+
+
+

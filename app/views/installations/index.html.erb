@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+	<div class="form-group">
+		<%= image_tag("rolodex.jpg") %><br/>
+	<p>Select the installation you need to find help.</p>	
+	<%= form_tag :action => 'show' do %>
+	  <%= select_tag :id, options_from_collection_for_select(@installations, :id, :name), class: "form-control", include_blank: true, :onchange => "document.location = '/installations/' + this.value"  %>
+	<% end %>
+	</div>
+	</div>
+  <div class="col-md-4"></div>
+</div>
+
+
+

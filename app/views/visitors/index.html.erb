@@ -1,2 +1,24 @@
-<h3>Welcome</h3>
-<p><%= link_to 'Users:', users_path %> <%= User.count %> registered</p>
+<div class = "row">
+	<div class="col-lg-12">
+		<div class="row">
+  			<div class="col-md-8">
+	<div class = "main-text">	
+<h3>One of the greatest challenges for a military homeowner is finding the right person to call when the wrong thing happens. It all comes down to trust. Who can you trust to do the job right, oh and stay in the budget? </h3>
+
+<p>This is the struggle. We are not woven into the community like a local. Another member of our military family may uncover the right person, but their wisdom gets lost when they move. We are here to change that.</p>
+
+	<p>Rolodex by Military Property Project is the spot. Simply drop your contacts on the page and they will be there, permanently. No more digging through a social media site looking for recommendations.</p>
+
+	<p>Now contacts used by others in our tight-knit community can be recorded for today, tomorrow, next year. </p>
+	<p>Pay it forward, add your contacts now.</p>
+		</div>
+		</div>
+  		<div class="col-md-4">
+
+	</div>
+  <div class="col-md-4">	<%= image_tag("rolodex.jpg") %>
+
+		<p><%= link_to 'Find Help', {:controller => "installations", :action => "index"}, :class => "btn btn-primary btn-lg btn-block" %></p>
+		<p><%= link_to 'Add To The List!', new_contact_path, :class => "btn btn-primary btn-lg btn-block" %>	</p></div>
+</div>
+</div>
